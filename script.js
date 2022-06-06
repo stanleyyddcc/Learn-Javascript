@@ -1,3 +1,4 @@
+//Javascript One
 const firstName = "Stanley";
 const lastName = "Darwin";
 console.log(`my name is ${firstName} ${lastName}`);
@@ -29,3 +30,31 @@ switch(boo){
         console.log("This is the default");
         break;
 }
+
+// Javascript Two
+
+let nomor = 1;
+while (nomor<10){
+    console.log(`This is number ${nomor}`);
+    nomor++;
+}
+
+for(let i=1; i<5;i++){
+    console.log(`Number ${i}`);
+}
+
+//array
+const fruits = ['banana','apel','manggo'];
+console.log(fruits[0]);
+fruits[0]='grape';
+console.log(fruits[0]);
+for(let i=0; i<fruits.length;i++){
+    console.log(fruits[i]);
+}
+
+//objects
+const items = [
+    {name:"Stanley", age:30},
+    {name:"Sherina", age:30}
+]
+console.log(items[0].name);
