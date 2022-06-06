@@ -58,3 +58,15 @@ const items = [
     {name:"Sherina", age:30}
 ]
 console.log(items[0].name);
+
+//Javascript Three
+const introduce = (name) =>{
+    console.log(`My name is ${name}`);
+}
+introduce("Stanley");
+
+const add =(a,b)=>{
+    return a+b;
+}
+const sum = add(1,3);
+console.log(sum);
