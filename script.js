@@ -70,3 +70,37 @@ const add =(a,b)=>{
 }
 const sum = add(1,3);
 console.log(sum);
+
+//Javascript Four
+class Animal{
+    constructor(name,age){
+        this.name=name;
+        this.age = age;
+    }
+
+    info(){
+        console.log(`Hello this is age ${this.age}`);
+    }
+}
+const animal = new Animal("Darwin",21);
+console.log(animal.name);
+animal.info();
+
+//inheritance
+class Dog extends Animal {
+    constructor(name,age,breed){
+        super(name,age);
+        this.breed=breed;
+    }
+    getHumanAge(){
+        return this.age*7;
+    }
+    info(){
+        console.log(`I am a ${this.breed}`);
+    }
+}
+
+const dog = new Dog("Boby",20,"buldog");
+const dogAge = dog.getHumanAge();
+console.log(dogAge);
+dog.info();
