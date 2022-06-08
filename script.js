@@ -1,3 +1,4 @@
+
 //Javascript One
 const firstName = "Stanley";
 const lastName = "Darwin";
@@ -72,35 +73,64 @@ const sum = add(1,3);
 console.log(sum);
 
 //Javascript Four
-class Animal{
-    constructor(name,age){
-        this.name=name;
-        this.age = age;
+class Animal {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
     }
-
-    info(){
-        console.log(`Hello this is age ${this.age}`);
+  
+    greet() {
+      console.log("Hello");
     }
-}
-const animal = new Animal("Darwin",21);
-console.log(animal.name);
-animal.info();
-
+  
+    info() {
+      this.greet();
+      console.log(`My name is ${this.name}`);
+      console.log(`I'm ${this.age} years old`);
+    }
+  }
+  class Dog extends Animal {
+    constructor(name, age, breed) {
+      super(name, age);
+      this.breed = breed;
+    }
+  
+    info() {
+      this.greet();
+      console.log(`My name is ${this.name}`);
+      console.log(`I am a ${this.breed}`);
+      console.log(`I'm ${this.age} years old`);
+      const humanAge = this.getHumanAge();
+      console.log(`I am ${humanAge} years old in human years`);
+    }
+  
+    getHumanAge() {
+      return this.age * 7;
+    }
+  }
 //inheritance
-class Dog extends Animal {
-    constructor(name,age,breed){
-        super(name,age);
-        this.breed=breed;
-    }
-    getHumanAge(){
-        return this.age*7;
-    }
-    info(){
-        console.log(`I am a ${this.breed}`);
-    }
-}
 
-const dog = new Dog("Boby",20,"buldog");
-const dogAge = dog.getHumanAge();
-console.log(dogAge);
+const dog = new Dog("Leo", 4, "Chihuahua");
 dog.info();
+
+//Javscript Six
+const numbers = [1,2,3];
+numbers.forEach((number)=>{
+    console.log(number);
+})
+
+const foundNumber = numbers.find((number)=>{
+    return number >1;
+})
+console.log(foundNumber);
+
+const filterNumber = numbers.filter((number)=>{
+    return number >1;
+})
+console.log(filterNumber);
+
+const doubleNumber = numbers.filter((number)=>{
+    return number*2;
+})
+
+console.log(doubleNumber);
